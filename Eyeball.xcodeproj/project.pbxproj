@@ -13,6 +13,7 @@
 		41C997372831E93F0058F203 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41C997352831E93F0058F203 /* Main.storyboard */; };
 		41C997392831E9410058F203 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41C997382831E9410058F203 /* Assets.xcassets */; };
 		41C9973C2831E9410058F203 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41C9973A2831E9410058F203 /* LaunchScreen.storyboard */; };
+		9BFEEBBB39CB6067CF282BF5 /* Pods_Eyeball.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5BFAE0801F328ACF9F45C7C /* Pods_Eyeball.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		41C997382831E9410058F203 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41C9973B2831E9410058F203 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		41C9973D2831E9410058F203 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		699906C82D0905810D20A9D7 /* Pods-Eyeball.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eyeball.debug.xcconfig"; path = "Target Support Files/Pods-Eyeball/Pods-Eyeball.debug.xcconfig"; sourceTree = "<group>"; };
+		DD741F8870FBD724545C8BCC /* Pods-Eyeball.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eyeball.release.xcconfig"; path = "Target Support Files/Pods-Eyeball/Pods-Eyeball.release.xcconfig"; sourceTree = "<group>"; };
+		E5BFAE0801F328ACF9F45C7C /* Pods_Eyeball.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eyeball.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BFEEBBB39CB6067CF282BF5 /* Pods_Eyeball.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				41C9972E2831E93F0058F203 /* Eyeball */,
 				41C9972D2831E93F0058F203 /* Products */,
+				E50E2FF290FEECD7890201FC /* Pods */,
+				5507A652E7DCC54F06C4D51B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = Eyeball;
 			sourceTree = "<group>";
 		};
+		5507A652E7DCC54F06C4D51B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E5BFAE0801F328ACF9F45C7C /* Pods_Eyeball.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E50E2FF290FEECD7890201FC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				699906C82D0905810D20A9D7 /* Pods-Eyeball.debug.xcconfig */,
+				DD741F8870FBD724545C8BCC /* Pods-Eyeball.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 41C997402831E9410058F203 /* Build configuration list for PBXNativeTarget "Eyeball" */;
 			buildPhases = (
+				C24E99A213C9190A45A2D443 /* [CP] Check Pods Manifest.lock */,
 				41C997282831E93F0058F203 /* Sources */,
 				41C997292831E93F0058F203 /* Frameworks */,
 				41C9972A2831E93F0058F203 /* Resources */,
+				8CB2E065556B1BCFD1619CBD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8CB2E065556B1BCFD1619CBD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Eyeball/Pods-Eyeball-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Eyeball/Pods-Eyeball-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Eyeball/Pods-Eyeball-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C24E99A213C9190A45A2D443 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Eyeball-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		41C997282831E93F0058F203 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		41C997412831E9410058F203 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 699906C82D0905810D20A9D7 /* Pods-Eyeball.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +380,7 @@
 		};
 		41C997422831E9410058F203 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD741F8870FBD724545C8BCC /* Pods-Eyeball.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
