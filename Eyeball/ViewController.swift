@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     lazy var titleLabel = makeTitleLabel()
     lazy var resetBtn = makeResetButton()
     lazy var scoreLabel = makeScoreLabel()
-    lazy var backgroundImageView = makeBackgroundImageView()
+    
     
     var randomNumber: Int = Int.random(in: 1...100) {
         didSet {
@@ -35,6 +35,12 @@ class ViewController: UIViewController {
     }
     
     func setupUI() {
+        
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: "background")
+        backgroundImage.contentMode = .scaleAspectFill
+        self.view.insertSubview(backgroundImage, at: 0)
+        
         view.addSubview(hitBtn)
         hitBtn.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
@@ -68,14 +74,6 @@ class ViewController: UIViewController {
             make.top.equalTo(titleLabel.snp.bottom).offset(50)
             make.width.lessThanOrEqualToSuperview()
         }
-        
-        view.addSubview(backgroundImageView)
-        backgroundImageView.snp.makeConstraints { make in
-            make.center.equalToSuperview()
-            make.size.equalToSuperview()
-        }
-        
-        view.sendSubviewToBack(backgroundImageView)
     }
     
     func makeHitButton() -> UIButton {
@@ -130,12 +128,6 @@ class ViewController: UIViewController {
         label.text = "Current Score: \(totalScore)"
         label.font = UIFont.systemFont(ofSize: 25)
         return label
-    }
-    
-    func makeBackgroundImageView() -> UIImageView {
-        let imageview = UIImageView()
-        imageview.image = UIImage(named: "background")
-        return imageview
     }
     
     @objc func hitBtnClicked() {
